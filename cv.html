@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Rincon | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .modal-active { display: flex !important; animation: fadeIn 0.3s inset; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <header class="bg-slate-900 text-white py-20 px-6 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full -mr-20 -mt-20"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">Santiago Rincon</h1>
+            <p class="text-xl md:text-2xl font-light text-blue-300 mb-8 uppercase tracking-widest">Full Stack Developer</p>
+            <div class="flex justify-center gap-6 text-3xl">
+                <a href="https://github.com/EiderSr0" class="hover:text-blue-400 transition-all transform hover:scale-110"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-all transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+                <a href="santiagoro0515@gmail.com" class="hover:text-blue-400 transition-all transform hover:scale-110"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 md:p-12 space-y-16">
+        
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center">
+                <i class="fas fa-user-code text-blue-500 mr-3"></i> Perfil Profesional
+            </h2>
+            <p class="text-lg leading-relaxed text-slate-600">
+                Tecnólogo en <strong>Análisis y Desarrollo de Software (SENA, 2024)</strong>. Especializado en el ecosistema <strong>PHP/Laravel</strong> integrado con frameworks modernos como <strong>React</strong> y <strong>Vue.js</strong>. Enfocado en la creación de aplicaciones web robustas que transforman datos complejos en interfaces intuitivas y funcionales.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center italic">Mi Stack de Herramientas</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-4 bg-white rounded-xl shadow-sm border-b-4 border-orange-500">
+                    <i class="fab fa-laravel text-3xl text-orange-500 mb-2"></i>
+                    <p class="font-bold">Laravel</p>
+                </div>
+                <div class="p-4 bg-white rounded-xl shadow-sm border-b-4 border-cyan-400">
+                    <i class="fab fa-react text-3xl text-cyan-400 mb-2"></i>
+                    <p class="font-bold">React</p>
+                </div>
+                <div class="p-4 bg-white rounded-xl shadow-sm border-b-4 border-emerald-500">
+                    <i class="fab fa-vuejs text-3xl text-emerald-500 mb-2"></i>
+                    <p class="font-bold">Vue.js</p>
+                </div>
+                <div class="p-4 bg-white rounded-xl shadow-sm border-b-4 border-blue-600">
+                    <i class="fas fa-database text-3xl text-blue-600 mb-2"></i>
+                    <p class="font-bold">MySQL / SQL</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+                <i class="fas fa-rocket text-blue-500 mr-3"></i> Proyectos Destacados
+            </h2>
+            <div class="grid md:grid-cols-1 gap-8">
+                
+                <div class="bg-white overflow-hidden rounded-2xl shadow-lg border border-slate-100 flex flex-col">
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-1"></div>
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 text-indigo-700">Observador Digital (2024)</h3>
+                        <p class="text-slate-600 mb-6 font-light">Aplicativo web para la gestión administrativa de instituciones educativas. Facilita el seguimiento de alumnos y la creación de observaciones académicas en tiempo real.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <img src="img/obs/obs-1.png" onclick="openModal(this.src)" class="h-40 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition shadow-sm border" alt="Vista 1">
+                            <img src="img/obs/obs-2.png" onclick="openModal(this.src)" class="h-40 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition shadow-sm border" alt="Vista 2">
+                            <img src="img/obs/obs-3.png" onclick="openModal(this.src)" class="h-40 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition shadow-sm border" alt="Vista 3">
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider italic">Laravel API</span>
+                            <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider italic">React Frontend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white overflow-hidden rounded-2xl shadow-lg border border-slate-100 flex flex-col">
+                    <div class="bg-gradient-to-r from-emerald-500 to-teal-600 p-1"></div>
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 text-emerald-700">Task Rendim (2026)</h3>
+                        <p class="text-slate-600 mb-6 font-light">Plataforma de gestión de tareas con un potente módulo de analítica. Permite visualizar el rendimiento del equipo mediante métricas mensuales dinámicas.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <img src="img/tasks/task-1.png" onclick="openModal(this.src)" class="h-40 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition shadow-sm border" alt="Métricas">
+                            <img src="img/tasks/task-3.png" onclick="openModal(this.src)" class="h-40 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition shadow-sm border" alt="Tareas">
+                            <img src="img/tasks/task-2.png" onclick="openModal(this.src)" class="h-40 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition shadow-sm border" alt="Dashboard">
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider italic">Laravel</span>
+                            <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider italic">Vue.js</span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider italic">Charts.js</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+                <i class="fas fa-graduation-cap text-blue-500 mr-3"></i> Educación
+            </h2>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-l-8 border-blue-500 flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-xl text-slate-800">Tecnologó en Análisis y Desarrollo de Software</h3>
+                    <p class="text-slate-500 font-medium">SENA (Servicio Nacional de Aprendizaje)</p>
+                </div>
+                <div class="text-right">
+                    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-bold">2024</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex-col items-center justify-center p-4" onclick="closeModal()">
+        <span class="absolute top-5 right-10 text-white text-4xl cursor-pointer hover:text-blue-400">&times;</span>
+        <img id="modalImg" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl border-2 border-white/20">
+        <p class="text-white mt-4 text-sm font-light italic">Clic en cualquier lugar para cerrar</p>
+    </div>
+
+    <footer class="bg-slate-900 py-10 text-center text-slate-400">
+        <p class="text-sm">&copy; 2024 Santiago Rincon | Hecho con Laravel, React & Vue en mente.</p>
+    </footer>
+
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').classList.add('modal-active');
+        }
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('modal-active');
+        }
+        // Cerrar con la tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+</body>
+</html>
